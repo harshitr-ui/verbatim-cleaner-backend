@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: verbatim-cleaner-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node app.js
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
